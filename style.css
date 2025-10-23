@@ -1,103 +1,123 @@
+/* استخدام خط عربي أنيق */
 body {
-    font-family: 'Arial', sans-serif;
-    direction: rtl; /* اتجاه النص من اليمين لليسار */
+    font-family: 'Cairo', sans-serif;
+    direction: rtl; 
     text-align: right;
     margin: 0;
     padding: 0;
-    background-color: #f4f7f6; /* خلفية خفيفة */
-    color: #333;
+    background-color: #f7f7f5; /* بيج فاتح جداً للخلفية */
+    color: #2c3e50; /* لون نص داكن احترافي */
+}
+
+/* الألوان الأساسية: (بيج، بني فاتح، برتقالي محروق) */
+:root {
+    --primary-color: #e76f51; /* لون رئيسي (برتقالي محروق) */
+    --secondary-color: #f4a261; /* لون ثانوي (برتقالي أفتح) */
+    --background-light: #ffffff;
+    --shadow-light: rgba(0, 0, 0, 0.08);
 }
 
 header {
-    background-color: #f7a9a9; /* لون مميز للمخبز (وردي/أحمر فاتح) */
+    background-color: var(--primary-color); 
     color: white;
-    padding: 20px;
+    padding: 25px 0;
     text-align: center;
-    border-bottom: 5px solid #e76f51;
+    box-shadow: 0 4px 10px var(--shadow-light);
+}
+
+header h1 {
+    font-weight: 700;
+    margin-bottom: 5px;
 }
 
 .dashboard {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 20px auto;
+    gap: 25px;
+    padding: 30px;
+    max-width: 1300px;
+    margin: 30px auto;
 }
 
 .stat-card {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    flex: 1; /* لتوزيع البطاقات بالتساوي */
-    min-width: 250px;
+    background-color: var(--background-light);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px var(--shadow-light);
+    padding: 25px;
+    flex: 1; 
+    min-width: 220px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* إضافة حركة */
+    border-top: 5px solid var(--secondary-color); /* شريط علوي مميز */
+}
+
+/* تأثير عند التمرير (الاحترافية والتفاعل) */
+.hover-effect:hover {
+    transform: translateY(-5px); /* رفع البطاقة قليلاً */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .primary-stat {
-    background-color: #e9c46a; /* لون لافت للإحصائية الرئيسية */
-    color: #264653;
+    border-top-color: var(--primary-color); /* تمييز البطاقة الرئيسية */
+}
+
+.stat-title {
+    font-size: 1em;
+    color: #6c757d;
+    margin-bottom: 10px;
 }
 
 .stat-value {
-    font-size: 3em;
+    font-size: 3.5em;
     font-weight: bold;
-    margin: 10px 0;
+    margin: 0;
+    color: var(--primary-color); 
 }
 
 .unit {
-    color: #666;
-    font-size: 0.9em;
-}
-
-.customer-satisfaction #stars {
-    color: gold; /* لون النجوم */
-    font-size: 1.5em;
+    color: #999;
+    font-size: 1em;
     display: block;
+    margin-top: 5px;
 }
 
-/* تنسيق الجدول */
+/* تنسيق رضى العملاء */
+.customer-satisfaction .stat-value {
+    color: #2a9d8f; /* لون أخضر أو أزرق لرضا العملاء */
+}
+.stars-container {
+    color: #ffc107; /* لون النجوم الذهبي */
+    font-size: 1.8em;
+    letter-spacing: 5px;
+    margin-top: 10px;
+}
+
+/* تنسيق الرسم البياني */
 .full-width-card {
     width: 100%;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
+    min-height: 400px; /* لضمان ظهور الرسم البياني جيداً */
+    background-color: var(--background-light);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px var(--shadow-light);
+    padding: 30px;
     margin-top: 15px;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: right;
-}
-
-th {
-    background-color: #f7a9a9;
-    color: white;
 }
 
 footer {
     text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    border-top: 1px solid #ddd;
-    font-size: 0.8em;
-    color: #666;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #e9e9e9;
+    font-size: 0.9em;
+    color: #555;
 }
 
-/* تنسيق خاص لشاشات الهاتف */
+/* تنسيق الشاشات الصغيرة */
 @media (max-width: 768px) {
     .dashboard {
-        flex-direction: column;
+        padding: 15px;
     }
     .stat-card {
-        min-width: 90%;
+        flex-basis: 100%; /* جعل كل بطاقة تأخذ عرض كامل */
     }
 }
