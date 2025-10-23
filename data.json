@@ -1,0 +1,16 @@
+{
+  "bakeit_delivery_stats": {
+    "partner_name_ar": "فريق نعاون لخدمات التوصيل",
+    "last_4_months_delivery_rate": 0.60,
+    "average_monthly_orders": 850,
+    "avg_delivery_time_minutes": 35,
+    "customer_satisfaction_rating": 4.7,
+    "team_members_count": 12,
+    "delivery_performance_by_month": [
+      {"month": "يوليو", "rate": 0.55, "orders": 800},
+      {"month": "أغسطس", "rate": 0.62, "orders": 880},
+      {"month": "سبتمبر", "rate": 0.65, "orders": 910},
+      {"month": "أكتوبر", "rate": 0.58, "orders": 810}
+    ]
+  }
+}
