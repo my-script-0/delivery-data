@@ -3,61 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إحصائيات توصيل مخبز Bake it</title>
+    <title>لوحة تحكم: إحصائيات توصيل Bake it</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>📊 إحصائيات توصيل طلبات Bake it</h1>
-        <p>بواسطة: <span id="partner-name">...</span></p>
+        <div class="header-content">
+            <h1>لوحة إحصائيات 📈 Bake it</h1>
+            <p>بالشراكة مع: <span id="partner-name">...</span></p>
+        </div>
     </header>
 
     <main class="dashboard">
 
-        <section class="stat-card primary-stat">
-            <h2>نسبة التوصيل لآخر 4 أشهر</h2>
+        <section class="stat-card primary-stat hover-effect">
+            <h2 class="stat-title">نسبة نجاح التوصيل لآخر 4 أشهر</h2>
             <p class="stat-value" id="delivery-rate-main">...</p>
         </section>
 
-        <section class="stat-card">
-            <h2>معدل الطلبات الشهري</h2>
+        <section class="stat-card hover-effect">
+            <h2 class="stat-title">معدل الطلبات الشهري</h2>
             <p class="stat-value" id="avg-orders">...</p>
         </section>
 
-        <section class="stat-card">
-            <h2>متوسط وقت التوصيل</h2>
+        <section class="stat-card hover-effect">
+            <h2 class="stat-title">متوسط وقت التوصيل (السرعة)</h2>
             <p class="stat-value" id="avg-time">...</p>
-            <span class="unit">دقيقة</span>
+            <span class="unit">دقيقة تقريباً</span>
         </section>
 
-        <section class="stat-card customer-satisfaction">
-            <h2>رضى العملاء (من 5)</h2>
+        <section class="stat-card customer-satisfaction hover-effect">
+            <h2 class="stat-title">رضى العملاء الكلي ⭐</h2>
             <p class="stat-value" id="satisfaction-rating">...</p>
-            <div id="stars"></div>
+            <div id="stars" class="stars-container"></div>
         </section>
 
-        <section class="full-width-card">
-            <h2>تفصيل أداء التوصيل الشهري (آخر 4 أشهر)</h2>
-            <table id="monthly-performance-table">
-                <thead>
-                    <tr>
-                        <th>الشهر</th>
-                        <th>نسبة التوصيل</th>
-                        <th>عدد الطلبات</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    </tbody>
-            </table>
+        <section class="full-width-card chart-container">
+            <h2>أداء التوصيل الشهري بالتفصيل</h2>
+            <canvas id="monthlyPerformanceChart"></canvas>
         </section>
         
     </main>
 
     <footer>
-        <p>&copy; 2025 لوحة إحصائيات "Bake it" - تم التطوير على GitHub</p>
+        <p>ملاحظة: البيانات تقريبية لأغراض العرض. &copy; 2025 لوحة تحكم التوصيل.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
