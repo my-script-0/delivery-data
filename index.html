@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إحصائيات توصيل مخبز Bake it</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>📊 إحصائيات توصيل طلبات Bake it</h1>
+        <p>بواسطة: <span id="partner-name">...</span></p>
+    </header>
+
+    <main class="dashboard">
+
+        <section class="stat-card primary-stat">
+            <h2>نسبة التوصيل لآخر 4 أشهر</h2>
+            <p class="stat-value" id="delivery-rate-main">...</p>
+        </section>
+
+        <section class="stat-card">
+            <h2>معدل الطلبات الشهري</h2>
+            <p class="stat-value" id="avg-orders">...</p>
+        </section>
+
+        <section class="stat-card">
+            <h2>متوسط وقت التوصيل</h2>
+            <p class="stat-value" id="avg-time">...</p>
+            <span class="unit">دقيقة</span>
+        </section>
+
+        <section class="stat-card customer-satisfaction">
+            <h2>رضى العملاء (من 5)</h2>
+            <p class="stat-value" id="satisfaction-rating">...</p>
+            <div id="stars"></div>
+        </section>
+
+        <section class="full-width-card">
+            <h2>تفصيل أداء التوصيل الشهري (آخر 4 أشهر)</h2>
+            <table id="monthly-performance-table">
+                <thead>
+                    <tr>
+                        <th>الشهر</th>
+                        <th>نسبة التوصيل</th>
+                        <th>عدد الطلبات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 لوحة إحصائيات "Bake it" - تم التطوير على GitHub</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
